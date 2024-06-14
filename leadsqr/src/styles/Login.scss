@@ -1,5 +1,12 @@
 @import '../variables/Variables.scss';
 
+@mixin Text{
+    color: $blueButton;
+    font-family: $textFont;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -54,11 +61,26 @@
                     top: 0;
                     right: 0;
                     margin: 15px;
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: $blueButton;
-                    font-family: $textFont;
+                    @include Text;
                 }
+            }
+            P{
+                @include Text;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+            button{
+                @include Text;
+                text-align: center;
+                width: 447px;
+                height: 48px;
+                margin-top: 10px;
+                color: $whiteText;
+                border-radius: 8px;
+                background-color: $blueButton;
+                
+                
             }
         }
     }

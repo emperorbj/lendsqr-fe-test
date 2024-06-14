@@ -26,6 +26,8 @@ const Login = () => {
                         <input type='password' name='email' placeholder='password'/>
                         <p>show</p>
                     </div>
+                    <p>FORGOT PASSWORD?</p>
+                    <button type='submit'>LOG{" "}IN</button>
                 </form>
             </div>
         </div>
