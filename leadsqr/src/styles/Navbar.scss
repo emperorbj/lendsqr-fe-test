@@ -1,0 +1,65 @@
+@import '../variables/Variables.scss';
+
+@mixin navText{
+    color: $secondaryTextColor;
+    font-family: $textFont;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-container{
+        background-color: chocolate;
+        margin-left: 30px;
+        div{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .search-container{
+        background-color: chartreuse;
+        display: flex;
+        width: 600px;
+        height: 40px;
+        .input-div{
+            width: 90%;
+            height: 100%;
+            input{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .search-icon-div{
+            padding: 10px;
+            padding-left: 20px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .right-container{
+        background-color: crimson;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:20px;
+        margin-right: 45px;
+        h1{
+            @include navText;
+            border-bottom: 3px solid $secondaryTextColor;
+        }
+        div{
+            display: flex;
+            h2{
+                @include navText;
+            }
+        }
+    }
+}
