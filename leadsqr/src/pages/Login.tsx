@@ -16,7 +16,17 @@ const Login = () => {
                 </div>
             </div>
             <div className='login-box'>
-
+                <h1>Welcome!</h1>
+                <p>Enter details to login</p>
+                <form className='form-container'>
+                    <div>
+                        <input type='text' name='email' placeholder='Email'/>
+                    </div>
+                    <div className='password'>
+                        <input type='password' name='email' placeholder='password'/>
+                        <p>show</p>
+                    </div>
+                </form>
             </div>
         </div>
     )
