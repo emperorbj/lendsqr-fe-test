@@ -7,23 +7,53 @@
     font-weight: 600;
 }
 
+
+
 .table-container{
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0px 30px 0px 30px;
-    background-color: chartreuse;
     gap:30px;
     .head{
-        background-color: coral;
         height: 100px;
-        margin-top: 128px;
+        margin-top: 90px;
+        font-family: $textFont;
+        font-size: 18px;
+        font-weight: 600;
+        color: $secondaryTextColor;
 
     }
     .top-boxes{
-        background-color: cornflowerblue;
-        height: 300px;
+        height: 250px;
+        display:flex;
+        gap:15px;
+        margin-bottom: 30px;
+        .box{
+            height: 100%;
+            width: 100%;
+            background-color: $whiteText;
+            padding-left: 30px;
+            padding-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0px 4px 6px 0px rgb(0,0,0,0.2);
+            h2{
+                font-size: 18px;
+                font-family: $textFont;
+                font-weight: 500;
+                color: $primaryTextColor;
+                margin: 20px 0px;
+                
+            }
+            h1{
+                font-size: 24px;
+                font-family: $textFont;
+                font-weight: 600;
+                color: $secondaryTextColor;
+            }
+
+        }
     }
     .table-div{
         background-color: burlywood;

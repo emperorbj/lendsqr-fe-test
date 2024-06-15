@@ -38,12 +38,20 @@ const Board = () => {
     return (
         <div className='table-container'>
             <div className='head'>
-
+                <h1>Users</h1>
             </div>
 
             <div className='top-boxes'>
                 {
-                    
+                    boxData.map((item,index) => (
+                        <div key={index} className='box'>
+                            <div>
+                                <img src={item.Image} alt="" />
+                            </div>
+                            <h2>{item.Title}</h2>
+                            <h1>{item.Amount}</h1>
+                        </div>
+                    ))
                 }
             </div>
 
