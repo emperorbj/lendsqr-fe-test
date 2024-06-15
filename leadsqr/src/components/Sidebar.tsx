@@ -46,36 +46,40 @@ const customerMenu: sideData[] = [
 
 const businessMenu: sideData[] = [
     {
-        Image: '/users.png',
-        Description: 'Users'
-    },
-    {
-        Image: '/guarantors.png',
-        Description: 'Guarantors'
+        Image: '/organization.png',
+        Description: 'Organization'
     },
     {
         Image: '/loans.png',
-        Description: 'Loans'
+        Description: 'Loan Products'
     },
     {
-        Image: '/decision.png',
-        Description: 'Decision Model'
+        Image: '/savingsProduct.png',
+        Description: 'Saving Products'
     },
     {
-        Image: '/save',
-        Description: 'Savings'
+        Image: '/feesCharges.png',
+        Description: 'Fees and Charges'
     },
     {
-        Image: '/request.png',
-        Description: 'Load Request'
+        Image: '/transactions.png',
+        Description: 'Transactions'
     },
     {
-        Image: '/whitelist.png',
-        Description: 'Whitelist'
+        Image: '/services.png',
+        Description: 'Services'
     },
     {
-        Image: '/user-times 1.png',
-        Description: 'Karma'
+        Image: '/serviceAccount.png',
+        Description: 'Service Account'
+    },
+    {
+        Image: '/settlements.png',
+        Description: 'Settlements'
+    },
+    {
+        Image: '/reports.png',
+        Description: 'Reports'
     }
 ]
 
@@ -84,17 +88,26 @@ const Sidebar = () => {
         <section className='sidebar-container'>
             <div className='switch'>
                 <img src={Organization} width={18} height={18} alt="" />
-                <h1>Switch Organization</h1>
+                <h3>Switch Organization</h3>
                 <img src={dropDown} width={18} height={18} alt="" />
             </div>
-            <div className='home-dashboard'>
+            <div className='sidebar-home-dashboard'>
                 <img src={HomeIcon} width={20} height={20} alt="" />
-                <h2>Dashboard</h2>
+                <p>Dashboard</p>
             </div>
-            <h2>Customers</h2>
+            <p>Customers</p>
         
             {
                 customerMenu.map((item,index) => (
+                    <div className='menu-container' key={index}>
+                        <img src={item.Image} width={18} height={18} alt="" />
+                        <p>{item.Description}</p>
+                    </div>
+                ))
+            }
+            <p>Business</p>
+            {
+                businessMenu.map((item,index) => (
                     <div className='menu-container' key={index}>
                         <img src={item.Image} width={18} height={18} alt="" />
                         <p>{item.Description}</p>

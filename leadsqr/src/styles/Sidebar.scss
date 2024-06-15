@@ -1,18 +1,23 @@
 @import '../variables/Variables.scss';
 
-@mixin SideBarText{
-    color: $primaryTextColor;
-    font-family: $textFont;
-    font-size: 18px;
-    font-weight: 600;
-}
 
 @mixin sideBarAlignment{
     display: flex;
-    gap: 8px;
     align-items: center;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: $worksans;
+    color: $primaryTextColor;
+    font-weight: 400;
+}
+
+@mixin menuTitle{
+    padding-left: 15px;
+    font-size: 18px;
+    font-family: $worksans;
+    color: $secondaryTextColor;
+    font-weight: 500;
+    margin: 10px 0px;
 }
 
 .sidebar-container{
@@ -23,19 +28,23 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    font-family: $worksans;
     .switch{
         background-color:chartreuse;
         width: 100%;
         height: 40px;
-        gap: 10px;
+        gap: 8px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        padding-left: 15px;
         margin-bottom: 20px;
     }
-    .home-dashboard{
+    .sidebar-home-dashboard{
         @include sideBarAlignment;
         margin-top: 10px;
+    }
+    p{
+        @include menuTitle;
     }
     .menu-container{
         background-color: aqua;
