@@ -2,12 +2,12 @@ import '../styles/Sidebar.scss'
 import dropDown from '../assets/orgdrop.png'
 import Organization from '../assets/organization.png'
 import HomeIcon from '../assets/home 1.png'
-import { customerMenu, businessMenu } from '../sideBarData/menuData'
+import { customerMenu, businessMenu, settingsMenu } from '../sideBarData/menuData'
 
 const Sidebar = () => {
     return (
-        <div className='parent-container'>
-            <section className='sidebar-container'>
+        
+        <section className='sidebar-container'>
             <div className='switch'>
                 <img src={Organization} width={18} height={18} alt="" />
                 <h3>Switch Organization</h3>
@@ -20,8 +20,8 @@ const Sidebar = () => {
             <p>Customers</p>
         
             {
-                customerMenu.map((item,index) => (
-                    <div className='menu-container' key={index}>
+                customerMenu.map((item) => (
+                    <div className='menu-container' key={item.Description}>
                         <img src={item.Image} width={18} height={18} alt="" />
                         <p>{item.Description}</p>
                     </div>
@@ -29,8 +29,17 @@ const Sidebar = () => {
             }
             <p>Business</p>
             {
-                businessMenu.map((item,index) => (
-                    <div className='menu-container' key={index}>
+                businessMenu.map((item) => (
+                    <div className='menu-container' key={item.Description}>
+                        <img src={item.Image} width={18} height={18} alt="" />
+                        <p>{item.Description}</p>
+                    </div>
+                ))
+            }
+            <p className='settings'>Settings</p>
+            {
+                    settingsMenu.map((item) => (
+                    <div className='menu-container' key={item.Description}>
                         <img src={item.Image} width={18} height={18} alt="" />
                         <p>{item.Description}</p>
                     </div>
@@ -38,7 +47,6 @@ const Sidebar = () => {
             }
         
         </section>
-        </div>
         
     )
 }

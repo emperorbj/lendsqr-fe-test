@@ -8,7 +8,7 @@
     padding-left: 15px;
     font-size: 18px;
     font-family: $worksans;
-    color: $primaryTextColor;
+    color: $secondaryTextColor;
     font-weight: 400;
 }
 
@@ -16,22 +16,23 @@
     padding-left: 15px;
     font-size: 18px;
     font-family: $worksans;
-    color: $secondaryTextColor;
+    color: $primaryTextColor;
     font-weight: 500;
     margin: 10px 0px;
 }
 
 .sidebar-container{
-    width: 100%;
+    width: 20%;
     height: 1440px;
-    background-color: brown;
+    background-color: $whiteText;
     padding: 30px 0px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     font-family: $worksans;
+    padding-bottom: 20px;
+    box-shadow: 0px 2px 2px 0px rgb(0,0,0,0.3);
     .switch{
-        background-color:chartreuse;
         width: 100%;
         height: 40px;
         gap: 8px;
@@ -48,10 +49,12 @@
         @include menuTitle;
     }
     .menu-container{
-        background-color: aqua;
         width: 100%;
         height: 40px;
+        border-left:5px solid $secondaryTextColor;
         @include sideBarAlignment;
-        
+    }
+    .settings{
+        margin-top: 10px;
     }
 }

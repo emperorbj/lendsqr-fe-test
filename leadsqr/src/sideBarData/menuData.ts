@@ -1,11 +1,30 @@
+
 // src/data/menuData.ts
 
-export interface sideData {
+export interface SideData {
     Image: string,
     Description: string,
 }
 
-export const customerMenu: sideData[] = [
+export const settingsMenu: SideData[] = [
+    {
+    
+        Image: '/preference.png',
+        Description: 'Preferences'
+    },
+    {
+    
+        Image: '/feesPricing.png',
+        Description: 'Fees and Pricing'
+    },
+    {
+    
+        Image: '/auditLog.png',
+        Description: 'Audit Logs'
+    }
+]
+
+export const customerMenu: SideData[] = [
     {
         Image: '/sideuser.png',
         Description: 'Users'
@@ -40,7 +59,7 @@ export const customerMenu: sideData[] = [
     }
 ]
 
-export const businessMenu: sideData[] = [
+export const businessMenu: SideData[] = [
     {
         Image: '/organization.png',
         Description: 'Organization'
