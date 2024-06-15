@@ -85,7 +85,8 @@ const businessMenu: sideData[] = [
 
 const Sidebar = () => {
     return (
-        <section className='sidebar-container'>
+        <div className='parent-container'>
+            <section className='sidebar-container'>
             <div className='switch'>
                 <img src={Organization} width={18} height={18} alt="" />
                 <h3>Switch Organization</h3>
@@ -116,6 +117,8 @@ const Sidebar = () => {
             }
         
         </section>
+        </div>
+        
     )
 }
 
