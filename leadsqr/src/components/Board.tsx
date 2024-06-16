@@ -1,4 +1,5 @@
 import '../styles/Board.scss';
+import Table from './Table';
 
 interface BoxData {
     Image: string,
@@ -56,7 +57,7 @@ const Board = () => {
             </div>
 
             <div className='table-div'>
-
+                <Table/>
             </div>
         </div>
     )

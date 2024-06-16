@@ -1,0 +1,68 @@
+// @import '../variables/Variables.scss';
+
+// @mixin SideBarText{
+//     color: $primaryTextColor;
+//     font-family: $textFont;
+//     font-size: 18px;
+//     font-weight: 600;
+// }
+
+// tr{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     th{
+//         display: flex;
+//         @include SideBarText;
+//     }
+// }
+
+@import '../variables/Variables.scss';
+
+@mixin SideBarText {
+    color: $primaryTextColor;
+    font-family: $textFont;
+    font-size: 18px;
+    font-weight: 600;
+    }
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    thead {
+        background-color: #f4f4f4;
+        tr {
+        th {
+            padding: 10px;
+            font-weight: 700;
+            @include SideBarText;
+            img {
+            margin-left: 5px;
+            }
+        }
+        }
+    }
+    tbody {
+        tr {
+        &:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        &:hover {
+            background-color: #f1f1f1;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            & img {
+            width: 16px;
+            height: 16px;
+            }
+        }
+        }
+    }
+    }
+
+

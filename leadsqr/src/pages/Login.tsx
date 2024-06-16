@@ -2,6 +2,7 @@ import '../styles/Login.scss';
 import Logo from '../assets/loginlogo.png';
 import Pix from '../assets/loginpix.png';
 
+
 const Login = () => {
     return (
         <div className='login-container'>
