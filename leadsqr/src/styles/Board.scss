@@ -57,21 +57,14 @@
         }
     }
     .table-div {
-        padding: 20px;
-        margin: 10px 0;
-        background-color: #fff;
         border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow-x: auto; // Allows horizontal scroll if table is too wide
+        border-radius: 4px;
+        // overflow-x: auto; // Allows horizontal scroll if table is too wide
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Adds subtle shadow for depth
 
         @media (max-width: 768px) {
-            padding: 10px;
+            
         }
 }
 
-    // .table-div{
-        
-    //     height: 700px;
-    // }
 }

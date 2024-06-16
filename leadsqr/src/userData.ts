@@ -34,7 +34,7 @@ const generateUser = (id: number): User => {
     return users;
 };
 
-const users = generateUsers(500);
+const users = generateUsers(50);
 
 
 

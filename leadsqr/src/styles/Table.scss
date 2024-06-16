@@ -1,68 +1,87 @@
-// @import '../variables/Variables.scss';
-
-// @mixin SideBarText{
-//     color: $primaryTextColor;
-//     font-family: $textFont;
-//     font-size: 18px;
-//     font-weight: 600;
-// }
-
-// tr{
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     th{
-//         display: flex;
-//         @include SideBarText;
-//     }
-// }
-
-@import '../variables/Variables.scss';
+@import "../variables/Variables.scss";
 
 @mixin SideBarText {
     color: $primaryTextColor;
     font-family: $textFont;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    }
+}
 
-    table {
+table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0px 0px 20px 0px;
     font-size: 16px;
-    text-align: left;
+    text-align: justify;
+    padding: 0px;
     thead {
         background-color: #f4f4f4;
+        padding: auto;
         tr {
-        th {
-            padding: 10px;
-            font-weight: 700;
-            @include SideBarText;
-            img {
-            margin-left: 5px;
+            th {
+                padding: 20px 0px 20px 0px;
+                font-weight: 700;
+                &.status, &.actions {
+                    padding-right: 30px;
+                }
+                &.phone-number, &.date-joined{
+                    width:150px;
+                    padding-right: 0px;
+                }
+                &.organization{
+                    width:140px;
+                    padding-left: 10px;
+                }
+                &.username{
+                    padding-left: 10px;
+                }
+                &.email{
+                    width: 300px;
+                    padding-left: 10px;
+                }
+                @include SideBarText;
+                font-size: 13px;
+                img {
+                    margin-left: 5px;
+                }
             }
-        }
+            .username{
+                padding-left: 10px;
+            }
         }
     }
     tbody {
-        tr {
-        &:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        &:hover {
-            background-color: #f1f1f1;
-        }
-        td {
-            padding: 10px;
+        
+        tr,td {
+            padding: 15px; // Add padding to each cell
+            text-align: left;
             border-bottom: 1px solid #ddd;
-            & img {
-            width: 16px;
-            height: 16px;
+            &.phone-number, &.date-joined, &.status, &.actions {
+                padding-right: 40px; // Adjust this value for desired spacing
             }
-        }
+            
+            @include SideBarText;
+                font-size: 16px;
         }
     }
-    }
+}
 
-
+//     tbody {
+//         tr {
+//         &:nth-child(even) {
+//             background-color: #f9f9f9;
+//         }
+//         &:hover {
+//             background-color: #f1f1f1;
+//         }
+//         td {
+//             padding: 10px;
+//             border-bottom: 1px solid #ddd;
+//             & img {
+//             width: 16px;
+//             height: 16px;
+//             }
+//         }
+//         }
+//     }
+//     }
