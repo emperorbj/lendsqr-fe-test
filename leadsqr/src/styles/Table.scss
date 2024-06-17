@@ -24,13 +24,17 @@ table {
                 &.status, &.actions {
                     padding-right: 30px;
                 }
+                .organization-icon-div{
+                    position: relative;
+                }
                 &.phone-number, &.date-joined{
                     width:150px;
                     padding-right: 0px;
                 }
                 &.organization{
-                    width:140px;
+                    width:160px;
                     padding-left: 10px;
+                    display: flex;
                 }
                 &.username{
                     padding-left: 10px;
@@ -43,6 +47,7 @@ table {
                 font-size: 13px;
                 img {
                     margin-left: 5px;
+                    cursor: pointer;
                 }
             }
             .username{
@@ -58,6 +63,13 @@ table {
             border-bottom: 1px solid #ddd;
             &.phone-number, &.date-joined, &.status, &.actions {
                 padding-right: 40px; // Adjust this value for desired spacing
+
+                img{
+                    cursor: pointer;
+                }
+            }
+            &.actions{
+                position: relative;
             }
             
             @include SideBarText;

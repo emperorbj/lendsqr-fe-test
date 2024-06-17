@@ -27,7 +27,9 @@ const Table = ({user}:TableProps) => {
                     <tr>
                         <th className="organization">
                             <span>ORGANIZATION</span>{" "}
-                            <img src={filter} width={14} height={14} alt="Filter" />
+                            <div className="organization-icon-div">
+                                <img src={filter} width={14} height={14} alt="Filter" />
+                            </div>
                         </th>
 
                         <th className="username">

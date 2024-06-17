@@ -89,6 +89,7 @@
             }
             button{
                 @include Text;
+                cursor: pointer;
                 text-align: center;
                 width: 447px;
                 height: 48px;

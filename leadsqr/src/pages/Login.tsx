@@ -1,6 +1,7 @@
 import '../styles/Login.scss';
 import Logo from '../assets/loginlogo.png';
 import Pix from '../assets/loginpix.png';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -28,7 +29,9 @@ const Login = () => {
                         <p>show</p>
                     </div>
                     <p>FORGOT PASSWORD?</p>
+                    <Link to='/dashboard'>
                     <button type='submit'>LOG{" "}IN</button>
+                    </Link>
                 </form>
             </div>
         </div>
