@@ -10,6 +10,8 @@ import viewDetails from '../assets/viewDetails.png'
 import blackList from '../assets/blackListUser.png'
 import activateUser from '../assets/activateUser.png'
 import '../styles/UserDetailsMenu.scss'
+import { Link } from "react-router-dom";
+// import TableRow from "./TableRow";
 interface User {
     id: number;
     organization: string;
@@ -26,7 +28,7 @@ interface TableProps {
 
 
 const Table = ({ user }: TableProps) => {
-
+    console.log(user)
     const [open, setOpen] = useState(false)
     const [detailsOpen, setDetailsOpen] = useState<number | null>(null);
 
@@ -42,7 +44,7 @@ const Table = ({ user }: TableProps) => {
                                 <img src={filter} width={14} height={14} onClick={() => setOpen(true)} alt="Filter" />
                                 {
                                     open && (
-                                        <div className='form-container' onClick={() => setOpen(false)}>
+                                        <div className='pop-up-container' onClick={() => setOpen(false)}>
                                             <form action="" className='form'>
                                                 <div className='label-input'>
                                                     <label className='label' htmlFor="organization">
@@ -135,7 +137,7 @@ const Table = ({ user }: TableProps) => {
                         <tr key={item.id}>
                             <td>{item.organization}</td>
 
-                            <td>{item.username}</td>
+                            <td><Link to={'/users/' + item.id}>{item.username}</Link></td>
 
                             <td>{item.email}</td>
                             <td className="phone-number">{item.phone_number}</td>
@@ -168,9 +170,16 @@ const Table = ({ user }: TableProps) => {
                             </td>
                         </tr>
                     ))}
+
+
+                    {/* {
+                        user.map((item) => (
+                            <TableRow key={item.id} item={item}/>
+                        ))
+                    } */}
                 </tbody>
             </table>
-    </>
+        </>
     );
 
 };

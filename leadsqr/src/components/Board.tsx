@@ -39,13 +39,45 @@ const boxData: BoxData[] = [
 
 const Board = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 20;
+    const recordsPerPage = 15;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
 
     const currentRecords = user.slice(firstIndex, lastIndex);
     const numberOfPages = Math.ceil(user.length / recordsPerPage);
-    const numbers = [...Array(numberOfPages + 1).keys()].slice(1);
+    // const numbers = [...Array(numberOfPages + 1).keys()].slice(1);
+
+
+
+
+    // New helper function to create pagination range
+    const getPaginationRange = () => {
+        const delta = 2;
+        const range = [];
+        const rangeWithDots = [];
+        let l;
+
+        range.push(1);
+        for (let i = currentPage - delta; i <= currentPage + delta; i++) {
+            if (i < numberOfPages && i > 1) {
+                range.push(i);
+            }
+        }
+        range.push(numberOfPages);
+
+        for (const i of range) {
+            if (l) {
+                if (i - l === 2) {
+                    rangeWithDots.push(l + 1);
+                } else if (i - l !== 1) {
+                    rangeWithDots.push('...');
+                }
+            }
+            rangeWithDots.push(i);
+            l = i;
+        }
+        return rangeWithDots;
+    }
     return (
         <div className='table-container'>
             <div className='head'>
@@ -73,13 +105,25 @@ const Board = () => {
                     <li className="page-item">
                         <a href="#" onClick={prevPage} className="page-link">prev</a>
                     </li>
-                    {
+                    {/* {
                         numbers.map((number, i) => (
                             <li key={i} className={`page-item ${currentPage === number ? 'active' : ''}`}>
                                 <a href="#" className="page-link"
                                     onClick={() => changePage(number)}>{number}</a>
                             </li>
                         ))
+                    } */}
+                    {
+                            getPaginationRange().map((number, i) => (
+                                <li key={i} className={`page-item ${currentPage === number ? 'active' : ''}`}>
+                                    {number === '...' ? (
+                                        <span className="page-link">...</span>
+                                    ) : (
+                                        <a href="#" className="page-link"
+                                            onClick={() => changePage(Number(number))}>{number}</a>
+                                    )}
+                                </li>
+                            ))
                     }
                     <li className="page-item">
                         <a href="#" onClick={nextPage} 
@@ -90,15 +134,19 @@ const Board = () => {
         </div>
     )
     function prevPage() {
-
+        if(currentPage !== 1){
+            setCurrentPage(currentPage - 1)
+        }
     }
 
-    function changePage(id) {
-
+    function changePage(id: number) {
+        setCurrentPage(id)
     }
 
     function nextPage() {
-
+        if(currentPage !== numberOfPages){
+            setCurrentPage(currentPage + 1)
+        }
     }
 }
 
