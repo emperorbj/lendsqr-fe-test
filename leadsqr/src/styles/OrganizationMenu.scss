@@ -1,0 +1,73 @@
+
+@import '../variables/Variables.scss';
+
+@mixin SideBarText{
+    color: $primaryTextColor;
+    font-family: $textFont;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-container{
+    cursor: pointer;
+    position: absolute;
+    left:-140px;
+    top:30px;
+    width: 300px;
+    height: 500px;
+    background-color: $whiteText;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(0,0,0,0.2);
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;    
+    }
+    .label-input{
+        @include SideBarText;
+        font-size: 16px;
+    
+    }
+    .reset-filter-button{
+        height: 45px;
+        display: flex;
+        gap: 10px;
+        button{
+            height: 100%;
+            width: 48%;
+            @include SideBarText;
+            font-size: 16px;
+            border-radius: 8px;
+            background-color: $whiteButton;
+        }
+        .filter-button{
+            background-color: $blueButton;
+            color: $whiteText;
+            outline: none;
+            border: 1px solid $blueButton;
+        }
+    }
+    .input-div{
+        background-color: $whiteButton;
+        height: 40px;
+        border-radius: 8px;
+        border:2px solid $primaryTextColor;
+        input{
+            height:100%;
+            width: 90%;
+            border-radius: 8px;
+            padding-left: 10px;
+            border: none;
+            outline: none;
+        }
+        img{
+            border: none;
+            outline: none;
+            background-color: $whiteButton;
+            padding-top: 5px;
+            object-position: center;
+        }
+
+    }
+}

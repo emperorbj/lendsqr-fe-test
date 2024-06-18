@@ -35,6 +35,9 @@ table {
                     width:160px;
                     padding-left: 10px;
                     display: flex;
+                    span{
+                        cursor: pointer;
+                    }
                 }
                 &.username{
                     padding-left: 10px;
