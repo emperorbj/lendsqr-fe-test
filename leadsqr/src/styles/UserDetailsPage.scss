@@ -1,50 +1,86 @@
-@import '../variables/Variables.scss';
+@import "../variables/Variables.scss";
 
-@mixin SideBarText{
-    color: $primaryTextColor;
-    font-family: $textFont;
-    font-size: 18px;
-    font-weight: 600;
+@mixin headerDetailsText {
+    color: $secondaryTextColor;
+    font-family: $worksans;
+    font-size: 20px;
+    font-weight: 500;
 }
-.side-details{
+
+@mixin subDetailsText {
+    color: $primaryTextColor;
+    font-family: $worksans;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@mixin DetailsText {
+    color: $primaryTextColor;
+    font-family: $worksans;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin section-borders {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    right: 75px;
+    width: 90%; 
+    height: 30px; 
+    border-bottom: 2px solid $primaryTextColor; 
+}
+.side-details {
     width: 100%;
     height: 1440px;
     display: flex;
-    .details{
-        background-color: brown;
+    .details {
+        background-color: $background;
         width: 80%;
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
         padding: 20px 30px 0px 30px;
-        .header-user-details{
+        .header-user-details {
             height: 10%;
             background-color: blueviolet;
         }
-        .user-profile-header{
+        .user-profile-header {
             height: 20%;
-            background-color: chartreuse;
+            background-color: blue;
         }
-        .detailed-user-info{
+        .detailed-user-info {
             height: 65%;
-            background-color: cadetblue;
-            .first-detail-section{
-                background-color: darkorange;
-                height: 33.3%;
-                h1{
+            background-color: $whiteText;
+            padding-left: 20px;
+            box-shadow: 0px 6px 6px 0px rgb(0,0,0,0.3);
+            .first-detail-section {
+                position: relative;
+                padding: 20px 0;
+                height: 25%;
+                h1 {
                     height: 14%;
-                    background-color: aquamarine;
+                    @include headerDetailsText;
                 }
-                .personal-info-div{
+                .personal-info-div {
                     height: 86%;
-                    background-color: $blueButton;
                     display: flex;
-                    .box-1{
-                        width:25%;
-                        background-color: darkgreen;
-                        border-right: 1px solid black;
+                    .box-1 {
+                        width: 20%;
                         position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        h2 {
+                            @include DetailsText;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                        p {
+                            @include subDetailsText;
+                            margin-left: 20px;
+                        }
                     }
                     // .box-1:after {
                     //     content: ""; /* Empty content for pseudo-element */
@@ -57,15 +93,118 @@
                     // }
                 }
             }
-            .second-detail-section{
-                background-color:mediumvioletred;
-                height: 33.3%;
+            .first-detail-section:after{
+                @include section-borders;
             }
-            .third-detail-section{
-                background-color: greenyellow;
-                height: 33.3%;
+            .second-detail-section {
+                padding: 10px 0;
+                position: relative;
+                height: 25%;
+                h1 {
+                    height: 14%;
+                    @include headerDetailsText;
+                }
+                .personal-info-div {
+                    height: 86%;
+                    display: flex;
+                    .box-1 {
+                        width: 20%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        h2 {
+                            @include DetailsText;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                        p {
+                            @include subDetailsText;
+                            margin-left: 20px;
+                        }
+                    }
+                    .last-box {
+                        width: 40%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        h2 {
+                            @include DetailsText;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                        p {
+                            @include subDetailsText;
+                            margin-left: 20px;
+                        }
+                    }
+                }
             }
-            
+            .second-detail-section:after{
+                @include section-borders;
+            }
+            .third-detail-section {
+                padding: 20px 0;
+                position: relative;
+                height: 20%;
+                h1 {
+                    height: 14%;
+                    @include headerDetailsText;
+                }
+                .personal-info-div {
+                    height: 86%;
+                    display: flex;
+                    .box-1 {
+                        width: 20%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        h2 {
+                            @include DetailsText;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                        p {
+                            @include subDetailsText;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+            .third-detail-section:after{
+                @include section-borders;
+            }
+            .fourth-detail-section {
+                padding: 20px 0;
+                position: relative;
+                height: 25%;
+                h1 {
+                    height: 14%;
+                    @include headerDetailsText;
+                }
+                .personal-info-div {
+                    height: 86%;
+                    display: flex;
+                    .box-1 {
+                        width: 20%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        h2 {
+                            @include DetailsText;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                        p {
+                            @include subDetailsText;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
