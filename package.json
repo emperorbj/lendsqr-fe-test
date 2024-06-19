@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "glob": "^10.4.2",
+    "lru-cache": "^10.2.2"
+  }
+}
