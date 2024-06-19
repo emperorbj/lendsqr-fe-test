@@ -2,9 +2,10 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import userAvatar from "../assets/useravatar.png"
-import fullStar from "../assets/fullstar.png"
-import emptyStar from "../assets/emptystar.png"
+import userAvatar from "../assets/useravatar.png";
+import fullStar from "../assets/fullstar.png";
+import emptyStar from "../assets/emptystar.png";
+import backarrow from "../assets/backarrow.png";
 import user from "../userData";
 import "../styles/UserDetailsPage.scss";
 
@@ -22,7 +23,19 @@ const UsersDetailsPage = () => {
             <div className="side-details">
                 <Sidebar />
                 <div className="details">
-                    <div className="header-user-details"></div>
+                    <div className="header-user-details">
+                        <div className="arrow-user">
+                            <div className="back-to-users">
+                                <img src={backarrow} alt="backarrow" />
+                                <p>Back to users</p>
+                            </div>
+                            <h2>User Details</h2>
+                        </div>
+                        <div className="blacklist-activate">
+                            <button className="blacklist-btn">Blacklist</button>
+                            <button className="activate-btn">Activate</button>
+                        </div>
+                    </div>
                     <div className="user-profile-header">
                         <div className="top">
                             <div className="avatar-username-container">
@@ -54,7 +67,24 @@ const UsersDetailsPage = () => {
                             </div>
                         </div>
                         <div className="bottom">
-
+                            <div>
+                                <p>General Details</p>
+                            </div>
+                            <div>
+                                <p>Documents</p>
+                            </div>
+                            <div>
+                                <p>Bank Details</p>
+                            </div>
+                            <div>
+                                <p>Loans</p>
+                            </div>
+                            <div>
+                                <p>Savings</p>
+                            </div>
+                            <div>
+                                <p>App and Systems</p>
+                            </div>
                         </div>
                     </div>
                     <div className="detailed-user-info">
@@ -85,7 +115,7 @@ const UsersDetailsPage = () => {
                                 <div className="box-1">
                                     <div className="email">
                                         <h2>EMAIL</h2>
-                                        <p>{userDetail.email}</p>
+                                        <p>{userDetail.firstName}{userDetail.mailExtension}</p>
                                     </div>
                                     <div>
                                         <h2>TYPE OF RESIDENCE</h2>

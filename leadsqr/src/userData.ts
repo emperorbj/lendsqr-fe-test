@@ -5,7 +5,7 @@ interface User {
     id: number;
     organization: string;
     username: string;
-    email: string;
+    firstName: string;
     phone_number: string;
     date_joined: string;
     user_status: string;
@@ -28,6 +28,7 @@ interface User {
     bvn_number: string;
     banks: string;
     account_number: string;
+    mailExtension: string;
 }
 
 const organizations = ["leadsqr", "leadway", "paystack", "meta"];
@@ -44,7 +45,7 @@ const loan = ["2,000", "3,300", "40,000", "3,000", "50,000", "900,000"];
 const relationship = ["Boss", "Pastor", "Sibling"];
 const residence = ["Flat", "Duplex", "Cottage", "Cabin"];
 const banks = ["First Bank", "Zenith Bank", "UBA Bank", "Access Bank", "GT Bank", "Polaris Bank"];
-
+const mailExtension = ["@gmail.com", "@yahoo.com", "rocketmail.com"]
 
 
 const generateUser = (id: number): User => {
@@ -52,7 +53,8 @@ const generateUser = (id: number): User => {
         id,
         organization: faker.helpers.arrayElement(organizations),
         username: faker.person.fullName(),
-        email: faker.internet.email(),
+        firstName: faker.person.firstName(),
+        mailExtension: faker.helpers.arrayElement(mailExtension),
         phone_number:  `08${faker.string.numeric(9)}`,
         bvn_number:  `21${faker.string.numeric(5)}`,
         account_number: `310${faker.string.numeric(10)}`,

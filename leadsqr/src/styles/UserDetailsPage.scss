@@ -1,3 +1,5 @@
+
+
 @import "../variables/Variables.scss";
 
 @mixin headerDetailsText {
@@ -30,10 +32,12 @@
     height: 30px; 
     border-bottom: 2px solid $primaryTextColor; 
 }
+
 .side-details {
     width: 100%;
     height: 1440px;
     display: flex;
+
     .details {
         background-color: $background;
         width: 80%;
@@ -42,40 +46,109 @@
         flex-direction: column;
         gap: 30px;
         padding: 20px 30px 0px 30px;
+
         .header-user-details {
             height: 10%;
             background-color: blueviolet;
+            display: flex;
+
+            .arrow-user {
+                width: 20%;
+                background-color: darkblue;
+
+                .back-to-users {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    p {
+                        font-size: 16px;
+                        font-family: $worksans;
+                        font-weight: 400;
+                        color: $primaryTextColor;
+                    }
+                }
+
+                h2 {
+                    margin-top: 40px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    font-family: $worksans;
+                    color: $secondaryTextColor;
+                }
+            }
+
+            .blacklist-activate {
+                width: 80%;
+                background-color: cadetblue;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                gap: 10px;
+
+                button {
+                    padding: 15px 45px;
+                }
+
+                .blacklist-btn {
+                    background-color: #ffffff;
+                    font-size: 16px;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-family: $worksans;
+                    color: $tertiaryTextColor;
+                    border: 2px solid $tertiaryTextColor;
+                }
+                .activate-btn{
+                    background-color: #ffffff;
+                    font-size: 16px;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-family: $worksans;
+                    color: $blueButton;
+                    border: 2px solid $blueButton;
+                }
+            }
         }
+
         .user-profile-header {
             height: 20%;
             background-color: blue;
-            .top{
-                height: 80%;
+
+            .top {
+                height: 85%;
                 background-color: chocolate;
                 display: flex;
-                .avatar-username-container{
+
+                .avatar-username-container {
                     width: 35%;
                     height: 100%;
                     background-color: dodgerblue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    .avatar-username{
+
+                    .avatar-username {
                         background-color: greenyellow;
                         display: flex;
                         gap: 15px;
-                        .username-id{
+
+                        .username-id {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            h2{
+
+                            h2 {
                                 @include headerDetailsText;
                                 font-size: 24px;
                                 font-weight: 500;
                                 margin-bottom: 10px;
                             }
-                            p{
+
+                            p {
                                 @include subDetailsText;
                                 font-size: 16px;
                                 font-weight: 400;
@@ -83,18 +156,21 @@
                         }
                     }
                 }
-                .tier-rating{
+
+                .tier-rating {
                     width: 15%;
                     height: 100%;
                     background-color: darkcyan;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    .tier-stars-div{
+
+                    .tier-stars-div {
                         background-color: crimson;
                         @include subDetailsText;
                         font-size: 14px;
-                        div{
+
+                        div {
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -102,21 +178,24 @@
                         }
                     }
                 }
-                .amount{
+
+                .amount {
                     width: 50%;
                     height: 100%;
                     background-color: darksalmon;
                     display: flex;
                     align-items: center;
                     padding-left: 20px;
-                    div{
-                        h2{
+
+                    div {
+                        h2 {
                             @include headerDetailsText;
                             font-size: 40px;
                             font-weight: 500;
                             margin-bottom: 10px;
                         }
-                        p{
+
+                        p {
                             @include subDetailsText;
                             font-size: 18px;
                             font-weight: 400;
@@ -124,38 +203,65 @@
                     }
                 }
             }
-            .bottom{
-                height: 20%;
+
+            .bottom {
+                height: 15%;
                 background-color: darkblue;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+
+                div {
+                    background-color: darksalmon;
+
+                    p {
+                        font-family: $roboto;
+                        font-size: 18px;
+                        margin-top: 15px;
+                        font-weight: 400;
+                    }
+                }
             }
         }
+
         .detailed-user-info {
             height: 65%;
             background-color: $whiteText;
             padding-left: 20px;
-            box-shadow: 0px 6px 6px 0px rgb(0,0,0,0.3);
+            box-shadow: 0px 6px 6px 0px rgb(0, 0, 0, 0.3);
+
             .first-detail-section {
                 position: relative;
                 padding: 20px 0;
                 height: 25%;
+
                 h1 {
                     height: 14%;
                     @include headerDetailsText;
                 }
+
                 .personal-info-div {
                     height: 86%;
                     display: flex;
+
                     .box-1 {
                         width: 20%;
                         position: relative;
                         display: flex;
                         flex-direction: column;
                         gap: 50px;
+
+                        .email {
+                            padding-right: 20px;
+                        }
+
                         h2 {
                             @include DetailsText;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
+
                         p {
                             @include subDetailsText;
                             margin-left: 20px;
@@ -172,47 +278,57 @@
                     // }
                 }
             }
-            .first-detail-section:after{
+
+            .first-detail-section:after {
                 @include section-borders;
             }
+
             .second-detail-section {
                 padding: 10px 0;
                 position: relative;
                 height: 25%;
+
                 h1 {
                     height: 14%;
                     @include headerDetailsText;
                 }
+
                 .personal-info-div {
                     height: 86%;
                     display: flex;
+
                     .box-1 {
                         width: 20%;
                         position: relative;
                         display: flex;
                         flex-direction: column;
                         gap: 30px;
+
                         h2 {
                             @include DetailsText;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
+
                         p {
                             @include subDetailsText;
                             margin-left: 20px;
                         }
                     }
+
                     .last-box {
                         width: 40%;
                         position: relative;
                         display: flex;
                         flex-direction: column;
                         gap: 50px;
+
                         h2 {
                             @include DetailsText;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
+
                         p {
                             @include subDetailsText;
                             margin-left: 20px;
@@ -220,31 +336,38 @@
                     }
                 }
             }
-            .second-detail-section:after{
+
+            .second-detail-section:after {
                 @include section-borders;
             }
+
             .third-detail-section {
                 padding: 20px 0;
                 position: relative;
                 height: 20%;
+
                 h1 {
                     height: 14%;
                     @include headerDetailsText;
                 }
+
                 .personal-info-div {
                     height: 86%;
                     display: flex;
+
                     .box-1 {
                         width: 20%;
                         position: relative;
                         display: flex;
                         flex-direction: column;
                         gap: 50px;
+
                         h2 {
                             @include DetailsText;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
+
                         p {
                             @include subDetailsText;
                             margin-left: 20px;
@@ -252,31 +375,38 @@
                     }
                 }
             }
-            .third-detail-section:after{
+
+            .third-detail-section:after {
                 @include section-borders;
             }
+
             .fourth-detail-section {
                 padding: 20px 0;
                 position: relative;
                 height: 25%;
+
                 h1 {
                     height: 14%;
                     @include headerDetailsText;
                 }
+
                 .personal-info-div {
                     height: 86%;
                     display: flex;
+
                     .box-1 {
                         width: 20%;
                         position: relative;
                         display: flex;
                         flex-direction: column;
                         gap: 50px;
+
                         h2 {
                             @include DetailsText;
                             margin-top: 20px;
                             margin-left: 20px;
                         }
+
                         p {
                             @include subDetailsText;
                             margin-left: 20px;
