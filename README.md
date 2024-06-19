@@ -7,17 +7,17 @@ This project is a business application for Lendsqr, built using React, TypeScrip
 
 
 ## Features
-- Login Page: Users can enter their credentials to log in.
-- Dashboard: Displays user data, navigation, and other relevant information.
-- User Details Page: Provides detailed information about a specific user, including personal information, employment details, social media accounts, and guarantors.
+- **Login Page**: Users can enter their credentials to log in.
+- **Dashboard**: Displays user data, navigation, and other relevant information.
+- **User Details** Page: Provides detailed information about a specific user, including personal information, employment details, social media accounts, and guarantors.
 
 
 
 ## WHY THIS PROJECT IS IMPORTANT
 
-- User Management: Simplifies the process of managing user data.
-- Data Organization: Organizes user data in a structured and easily accessible way.
-- Enhanced User Experience: Provides a clean and intuitive interface for users to interact with the application.
+- **User Management**: Simplifies the process of managing user data.
+- **Data Organization**: Organizes user data in a structured and easily accessible way.
+- **Enhanced User Experience**: Provides a clean and intuitive interface for users to interact with the application.
 ## TECH STACK 
 
 - **React**: JavaScript library for building user interfaces.
