@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-
+import userAvatar from "../assets/useravatar.png"
+import fullStar from "../assets/fullstar.png"
+import emptyStar from "../assets/emptystar.png"
 import user from "../userData";
 import "../styles/UserDetailsPage.scss";
 
@@ -21,7 +23,40 @@ const UsersDetailsPage = () => {
                 <Sidebar />
                 <div className="details">
                     <div className="header-user-details"></div>
-                    <div className="user-profile-header"></div>
+                    <div className="user-profile-header">
+                        <div className="top">
+                            <div className="avatar-username-container">
+                                <div className="avatar-username">
+                                    <div>
+                                        <img src={userAvatar} width={150} height={150} alt="" />
+                                    </div>
+                                    <div className="username-id">
+                                        <h2>{userDetail.username}</h2>
+                                        <p>{userDetail.special_id}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="tier-rating">
+                                <div className="tier-stars-div">
+                                    <h2>User's Tier</h2>
+                                    <div>
+                                        <img src={fullStar} alt="" />
+                                        <img src={fullStar} alt="" />
+                                        <img src={emptyStar} alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="amount">
+                                <div>
+                                    <h2>N{userDetail.income}</h2>
+                                    <p>{userDetail.account_number}/{userDetail.banks}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bottom">
+
+                        </div>
+                    </div>
                     <div className="detailed-user-info">
 {/* //////////////////////////////////////////////////////////////////////////////////////////// */}
                         <div className="first-detail-section">
@@ -60,7 +95,7 @@ const UsersDetailsPage = () => {
                                 <div className="box-1">
                                     <div className="BVN">
                                         <h2>BVN</h2>
-                                        <p>{userDetail.phone_number}</p>
+                                        <p>{userDetail.bvn_number}</p>
                                     </div>
                                 </div>
                                 <div className="box-1">
@@ -108,7 +143,7 @@ const UsersDetailsPage = () => {
                                 <div className="last-box">
                                     <div>
                                         <h2>DURATION OF EMPLOYMENT</h2>
-                                        <p>{userDetail.duration}</p>
+                                        <p>{userDetail.duration} years</p>
                                     </div>
                                 </div>
                             </div>

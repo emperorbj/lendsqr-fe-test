@@ -24,6 +24,10 @@ interface User {
     guarantor_second: string;
     guarantor_number: string;
     second_guarantor_number: string;
+    special_id: string;
+    bvn_number: string;
+    banks: string;
+    account_number: string;
 }
 
 const organizations = ["leadsqr", "leadway", "paystack", "meta"];
@@ -38,7 +42,8 @@ const duration = ["2", "4", "6"];
 const income = ["200,000", "400,000", "300,000", "1000,000", "300,000"];
 const loan = ["2,000", "3,300", "40,000", "3,000", "50,000", "900,000"];
 const relationship = ["Boss", "Pastor", "Sibling"];
-const residence = ["Flat", "Duplex", "Cottage", "Cabin"]
+const residence = ["Flat", "Duplex", "Cottage", "Cabin"];
+const banks = ["First Bank", "Zenith Bank", "UBA Bank", "Access Bank", "GT Bank", "Polaris Bank"];
 
 
 
@@ -49,6 +54,9 @@ const generateUser = (id: number): User => {
         username: faker.person.fullName(),
         email: faker.internet.email(),
         phone_number:  `08${faker.string.numeric(9)}`,
+        bvn_number:  `21${faker.string.numeric(5)}`,
+        account_number: `310${faker.string.numeric(10)}`,
+        banks: faker.helpers.arrayElement(banks),
         guarantor_number:  `09${faker.string.numeric(9)}`,
         second_guarantor_number:  `07${faker.string.numeric(9)}`,
         date_joined: faker.date.past().toISOString(),
@@ -65,7 +73,8 @@ const generateUser = (id: number): User => {
         relationship: faker.helpers.arrayElement(relationship),
         guarantor_name: faker.person.fullName(),
         guarantor_second: faker.person.fullName(),
-        residence: faker.helpers.arrayElement(residence)
+        residence: faker.helpers.arrayElement(residence),
+        special_id: faker.internet.password()
 
     };
     };

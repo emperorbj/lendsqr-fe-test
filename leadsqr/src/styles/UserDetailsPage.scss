@@ -4,7 +4,7 @@
     color: $secondaryTextColor;
     font-family: $worksans;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 @mixin subDetailsText {
@@ -49,6 +49,85 @@
         .user-profile-header {
             height: 20%;
             background-color: blue;
+            .top{
+                height: 80%;
+                background-color: chocolate;
+                display: flex;
+                .avatar-username-container{
+                    width: 35%;
+                    height: 100%;
+                    background-color: dodgerblue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .avatar-username{
+                        background-color: greenyellow;
+                        display: flex;
+                        gap: 15px;
+                        .username-id{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            h2{
+                                @include headerDetailsText;
+                                font-size: 24px;
+                                font-weight: 500;
+                                margin-bottom: 10px;
+                            }
+                            p{
+                                @include subDetailsText;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .tier-rating{
+                    width: 15%;
+                    height: 100%;
+                    background-color: darkcyan;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .tier-stars-div{
+                        background-color: crimson;
+                        @include subDetailsText;
+                        font-size: 14px;
+                        div{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+                .amount{
+                    width: 50%;
+                    height: 100%;
+                    background-color: darksalmon;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    div{
+                        h2{
+                            @include headerDetailsText;
+                            font-size: 40px;
+                            font-weight: 500;
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            @include subDetailsText;
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            .bottom{
+                height: 20%;
+                background-color: darkblue;
+            }
         }
         .detailed-user-info {
             height: 65%;
