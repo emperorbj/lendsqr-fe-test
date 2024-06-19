@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
@@ -26,8 +26,10 @@ const UsersDetailsPage = () => {
                     <div className="header-user-details">
                         <div className="arrow-user">
                             <div className="back-to-users">
-                                <img src={backarrow} alt="backarrow" />
-                                <p>Back to users</p>
+                                <Link to='/dashboard'>
+                                    <img src={backarrow} alt="backarrow" />
+                                    <p>Back to users</p>
+                                </Link>
                             </div>
                             <h2>User Details</h2>
                         </div>
@@ -68,7 +70,7 @@ const UsersDetailsPage = () => {
                         </div>
                         <div className="bottom">
                             <div>
-                                <p>General Details</p>
+                                <p className="general">General Details</p>
                             </div>
                             <div>
                                 <p>Documents</p>

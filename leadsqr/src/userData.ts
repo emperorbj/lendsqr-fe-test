@@ -45,7 +45,7 @@ const loan = ["2,000", "3,300", "40,000", "3,000", "50,000", "900,000"];
 const relationship = ["Boss", "Pastor", "Sibling"];
 const residence = ["Flat", "Duplex", "Cottage", "Cabin"];
 const banks = ["First Bank", "Zenith Bank", "UBA Bank", "Access Bank", "GT Bank", "Polaris Bank"];
-const mailExtension = ["@gmail.com", "@yahoo.com", "rocketmail.com"]
+const mailExtension = ["@gmail.com", "@yahoo.com", "@rocketmail.com"]
 
 
 const generateUser = (id: number): User => {

@@ -21,7 +21,7 @@ const Sidebar = () => {
         
             {
                 customerMenu.map((item) => (
-                    <div className='menu-container' key={item.Description}>
+                    <div  className={`menu-container ${item.Description === "Users" ? 'users-menu-item' : ''}`}>
                         <img src={item.Image} width={18} height={18} alt="" />
                         <p>{item.Description}</p>
                     </div>

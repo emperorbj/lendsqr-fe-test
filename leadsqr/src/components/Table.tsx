@@ -144,16 +144,22 @@ const Table = ({ user }: TableProps) => {
                             <td className="date-joined">
                                 {new Date(item.date_joined).toLocaleDateString()}
                             </td>
-                            <td className="status">{item.user_status}</td>
+                            <td className={`status
+                                ${item.user_status === "active" ? "activate-btn": "" }
+                                ${item.user_status === "inactive" ? "inactive-btn": "" }
+                                ${item.user_status === "blacklisted" ? "blacklist-btn": "" }
+                                ${item.user_status === "pending" ? "pending-btn": "" }`}>{item.user_status}</td>
                             <td className="actions">
                                 <img src={threedots}  onClick ={() => setDetailsOpen(detailsOpen === item.id ? null : item.id)} alt="Actions" />
                                 {
                                     detailsOpen === item.id && (
                                         <div className='details-container'>
+                                        <Link to={'/users/' + item.id}>
                                         <div>
                                             <img src={viewDetails} alt="" />
                                             <p>View Details</p>
                                         </div>
+                                        </Link>
                                         <div>
                                             <img src={blackList} alt="" />
                                             <p>Blacklist User</p>

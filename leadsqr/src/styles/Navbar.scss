@@ -12,9 +12,17 @@ nav{
     align-items: center;
     justify-content: space-between;
     background-color: $whiteText;
-    box-shadow: 0px 6px 6px 0px rgb(0,0,0,0.3);
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
     .logo-container{
         margin-left: 30px;
+        @media (max-width: 768px) {
+            margin: 0;
+        }
         div{
             display: flex;
             gap: 10px;
@@ -29,6 +37,10 @@ nav{
         height: 40px;
         border: 1px solid $secondaryTextColor;
         border-radius: 8px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 10px;
+        }
         .input-div{
             width: 90%;
             height: 100%;
@@ -54,9 +66,17 @@ nav{
         justify-content: space-between;
         gap:20px;
         margin-right: 45px;
+        @media (max-width: 768px) {
+            margin: 0;
+            flex-direction: column;
+            gap: 10px;
+        }
         h1{
             @include navText;
             border-bottom: 3px solid $secondaryTextColor;
+            @media (max-width: 768px) {
+                border: none;
+            }
         }
         div{
             display: flex;

@@ -19,6 +19,12 @@
     padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgb(0,0,0,0.2);
+    @media (max-width: 768px) {
+        border: none;
+        width:260px;
+        left:-120px;
+        margin-left: 10px;
+    }
     .form{
         display: flex;
         flex-direction: column;

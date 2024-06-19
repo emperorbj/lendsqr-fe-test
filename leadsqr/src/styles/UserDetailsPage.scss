@@ -35,26 +35,56 @@
 
 .side-details {
     width: 100%;
-    height: 1440px;
+    // height: 1440px;
+    // display: flex;
     display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        height: 1440px;
+    }
 
     .details {
         background-color: $background;
-        width: 80%;
+        // width: 80%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        padding: 20px 30px 0px 30px;
+        // 
+        padding: 20px 15px;
+        @media (min-width: 768px) {
+            width: 80%;
+            padding: 20px 30px 0px 30px;
+        }
+        
 
         .header-user-details {
-            height: 10%;
-            background-color: blueviolet;
+            // height: 10%;
+            // background-color: $background;
+            // display: flex;
+            height: auto;
+            background-color: $background;
             display: flex;
+            flex-direction: column;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                height: 10%;
+            }
 
             .arrow-user {
-                width: 20%;
-                background-color: darkblue;
+                // width: 20%;
+                // background-color: $background;
+                // padding-top: 10px;
+                // padding-left: 5px;
+                width: 100%;
+                background-color: $background;
+                padding-top: 10px;
+                padding-left: 5px;
+                @media (min-width: 768px) {
+                    width: 20%;
+                }
 
                 .back-to-users {
                     display: flex;
@@ -75,21 +105,44 @@
                     font-weight: 400;
                     font-family: $worksans;
                     color: $secondaryTextColor;
+                    @media (min-width: 768px) {
+                        margin-top: 40px;
+                    }
                 }
             }
 
             .blacklist-activate {
-                width: 80%;
-                background-color: cadetblue;
+                // background-color: $background;
+                // width: 80%;
+                // display: flex;
+                // align-items: flex-end;
+                // justify-content: flex-end;
+                // padding-right: 30px;
+                // padding-bottom: 30px;
+                // gap: 10px;
+                background-color: $background;
+                width: 100%;
                 display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
-                padding-right: 30px;
-                padding-bottom: 30px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0;
                 gap: 10px;
+                @media (min-width: 768px) {
+                    width: 80%;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    padding-right: 30px;
+                    padding-bottom: 30px;
+                }
 
                 button {
-                    padding: 15px 45px;
+                    // padding: 15px 45px;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    @media (min-width: 768px) {
+                        padding: 15px 45px;
+                        font-size: 16px;
+                    }
                 }
 
                 .blacklist-btn {
@@ -114,26 +167,41 @@
         }
 
         .user-profile-header {
-            height: 20%;
-            background-color: blue;
+            // height: 20%;
+            // background-color: #ffffff;
+            background-color: #ffffff;
+            padding: 10px 0;
 
             .top {
                 height: 85%;
-                background-color: chocolate;
+                //display: flex;
                 display: flex;
-
+                // flex-direction: column;
                 .avatar-username-container {
-                    width: 35%;
+                    // width: 35%;
+                    width: 100%;
                     height: 100%;
-                    background-color: dodgerblue;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    // @media (min-width: 768px) {
+                    //     height: 85%;
+                    //     flex-direction: row;
+                    // }
+                    @media (min-width: 768px) {
+                        width: 35%;
+                    }
 
                     .avatar-username {
-                        background-color: greenyellow;
+                        // display: flex;
+                        // gap: 15px;
                         display: flex;
+                        // flex-direction: column;
                         gap: 15px;
+
+                        @media (min-width: 768px) {
+                            flex-direction: row;
+                        }
 
                         .username-id {
                             display: flex;
@@ -158,15 +226,23 @@
                 }
 
                 .tier-rating {
-                    width: 15%;
-                    height: 100%;
-                    background-color: darkcyan;
+                    // width: 15%;
+                    // height: 100%;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    padding: 10px 0;
+
+                    @media (min-width: 768px) {
+                        width: 15%;
+                        padding: 0;
+                    }
 
                     .tier-stars-div {
-                        background-color: crimson;
                         @include subDetailsText;
                         font-size: 14px;
 
@@ -180,12 +256,22 @@
                 }
 
                 .amount {
-                    width: 50%;
-                    height: 100%;
-                    background-color: darksalmon;
+                    // width: 50%;
+                    // height: 100%;
+                    // display: flex;
+                    // align-items: center;
+                    // padding-left: 20px;
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    padding-left: 20px;
+                    justify-content: center;
+                    padding: 10px 0;
+
+                    @media (min-width: 768px) {
+                        width: 50%;
+                        padding: 0 20px;
+                        justify-content: flex-start;
+                    }
 
                     div {
                         h2 {
@@ -193,12 +279,18 @@
                             font-size: 40px;
                             font-weight: 500;
                             margin-bottom: 10px;
+                            @media (min-width: 768px) {
+                                font-size: 40px;
+                            }
                         }
 
                         p {
                             @include subDetailsText;
                             font-size: 18px;
                             font-weight: 400;
+                            @media (min-width: 768px) {
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
@@ -206,20 +298,21 @@
 
             .bottom {
                 height: 15%;
-                background-color: darkblue;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 20px;
 
                 div {
-                    background-color: darksalmon;
 
                     p {
                         font-family: $roboto;
                         font-size: 18px;
                         margin-top: 15px;
                         font-weight: 400;
+                    }
+                    .general{
+                        border-bottom: 4px solid $blueButton;
                     }
                 }
             }

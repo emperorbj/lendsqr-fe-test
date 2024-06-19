@@ -21,28 +21,30 @@ table {
             th {
                 padding: 20px 0px 20px 0px;
                 font-weight: 700;
-                &.status, &.actions {
+                &.status,
+                &.actions {
                     padding-right: 30px;
                 }
-                .organization-icon-div{
+                .organization-icon-div {
                     position: relative;
                 }
-                &.phone-number, &.date-joined{
-                    width:150px;
+                &.phone-number,
+                &.date-joined {
+                    width: 150px;
                     padding-right: 0px;
                 }
-                &.organization{
-                    width:160px;
+                &.organization {
+                    width: 160px;
                     padding-left: 10px;
                     display: flex;
-                    span{
+                    span {
                         cursor: pointer;
                     }
                 }
-                &.username{
+                &.username {
                     padding-left: 10px;
                 }
-                &.email{
+                &.email {
                     width: 300px;
                     padding-left: 10px;
                 }
@@ -53,30 +55,66 @@ table {
                     cursor: pointer;
                 }
             }
-            .username{
+            .username {
                 padding-left: 10px;
             }
         }
     }
     tbody {
-        
-        tr,td {
+        tr,
+        td {
             padding: 15px; // Add padding to each cell
             text-align: left;
             border-bottom: 1px solid #ddd;
-            &.phone-number, &.date-joined, &.status, &.actions {
+            &.phone-number,
+            &.date-joined,
+            &.status,
+            &.actions {
                 padding-right: 40px; // Adjust this value for desired spacing
 
-                img{
+                img {
                     cursor: pointer;
                 }
             }
-            &.actions{
+            &.actions {
                 position: relative;
             }
-            
+
             @include SideBarText;
-                font-size: 16px;
+            font-size: 16px;
+            a{
+                text-decoration: none;
+                color: $primaryTextColor;
+            }
+        }
+        
+        .activate-btn {
+            font-size: 20px;
+            font-weight: 600;
+            color: #39cd62;
+            font-family: $worksans;
+            text-align: center;
+        }
+        .pending-btn {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e9b200;
+            font-family: $worksans;
+            text-align: center;
+        }
+        .blacklist-btn {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e4033b;
+            font-family: $worksans;
+            text-align: center;
+        }
+        .inactive-btn {
+            font-size: 20px;
+            font-weight: 600;
+            color: #545F7D;
+            font-family: $worksans;
+            text-align: center;
         }
     }
 }
