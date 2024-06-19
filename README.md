@@ -29,7 +29,7 @@ This project is a business application for Lendsqr, built using React, TypeScrip
  1. Clone the Repository
 
 ```bash
-git clone https://github.com/emperorbj/lendsqr-business-project.git
+git clone https://github.com/emperorbj/assessment.git
 cd lendsqr-business-project
 
 ```
