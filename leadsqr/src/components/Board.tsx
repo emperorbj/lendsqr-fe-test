@@ -3,6 +3,7 @@ import Table from './Table';
 import user from "../userData";
 import { useState } from 'react';
 import '../styles/Pagination.scss';
+import { User } from '../type';
 interface BoxData {
     Image: string,
     Title: string,
@@ -43,7 +44,7 @@ const Board = () => {
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
 
-    const currentRecords = user.slice(firstIndex, lastIndex);
+    const currentRecords: User[] = user.slice(firstIndex, lastIndex);
     const numberOfPages = Math.ceil(user.length / recordsPerPage);
     // const numbers = [...Array(numberOfPages + 1).keys()].slice(1);
 

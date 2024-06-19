@@ -63,14 +63,14 @@ table {
     tbody {
         tr,
         td {
-            padding: 15px; // Add padding to each cell
+            padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
             &.phone-number,
             &.date-joined,
             &.status,
             &.actions {
-                padding-right: 40px; // Adjust this value for desired spacing
+                padding-right: 40px;
 
                 img {
                     cursor: pointer;

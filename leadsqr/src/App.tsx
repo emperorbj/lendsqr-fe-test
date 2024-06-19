@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import Spinner from './components/Spinner';
 // import Login from './pages/Login';
 // import Dashboard from './pages/Dashboard';

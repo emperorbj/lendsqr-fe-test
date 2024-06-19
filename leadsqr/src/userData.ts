@@ -1,35 +1,38 @@
 // src/generateUsers.ts
 import { faker } from '@faker-js/faker';
 
-interface User {
-    id: number;
-    organization: string;
-    username: string;
-    firstName: string;
-    phone_number: string;
-    date_joined: string;
-    user_status: string;
-    gender: string;
-    education: string;
-    employment:string;
-    marital: string;
-    children: string;
-    sector: string;
-    duration: string;
-    income: string;
-    loan: string;
-    relationship: string;
-    guarantor_name: string;
-    residence: string;
-    guarantor_second: string;
-    guarantor_number: string;
-    second_guarantor_number: string;
-    special_id: string;
-    bvn_number: string;
-    banks: string;
-    account_number: string;
-    mailExtension: string;
-}
+import { User } from './type'
+
+// interface User {
+//     id: number;
+//     organization: string;
+//     username: string;
+//     firstName: string;
+//     phone_number: string;
+//     date_joined: string;
+//     user_status: string;
+//     gender: string;
+//     education: string;
+//     employment:string;
+//     marital: string;
+//     children: string;
+//     sector: string;
+//     duration: string;
+//     income: string;
+//     loan: string;
+//     relationship: string;
+//     guarantor_name: string;
+//     residence: string;
+//     guarantor_second: string;
+//     guarantor_number: string;
+//     second_guarantor_number: string;
+//     special_id: string;
+//     bvn_number: string;
+//     banks: string;
+//     account_number: string;
+//     mailExtension: string;
+//     email: string;
+// }
 
 const organizations = ["leadsqr", "leadway", "paystack", "meta"];
 const statuses = ["blacklisted", "active", "inactive", "pending"];
@@ -60,7 +63,6 @@ const generateUser = (id: number): User => {
         account_number: `310${faker.string.numeric(10)}`,
         banks: faker.helpers.arrayElement(banks),
         guarantor_number:  `09${faker.string.numeric(9)}`,
-        second_guarantor_number:  `07${faker.string.numeric(9)}`,
         date_joined: faker.date.past().toISOString(),
         user_status: faker.helpers.arrayElement(statuses),
         gender: faker.helpers.arrayElement(gender),
@@ -74,9 +76,9 @@ const generateUser = (id: number): User => {
         loan: faker.helpers.arrayElement(loan),
         relationship: faker.helpers.arrayElement(relationship),
         guarantor_name: faker.person.fullName(),
-        guarantor_second: faker.person.fullName(),
         residence: faker.helpers.arrayElement(residence),
-        special_id: faker.internet.password()
+        special_id: faker.internet.password(),
+        email: faker.internet.email()
 
     };
     };

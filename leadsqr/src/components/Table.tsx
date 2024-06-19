@@ -11,16 +11,17 @@ import blackList from '../assets/blackListUser.png'
 import activateUser from '../assets/activateUser.png'
 import '../styles/UserDetailsMenu.scss'
 import { Link } from "react-router-dom";
+import { User } from '../type';
 // import TableRow from "./TableRow";
-interface User {
-    id: number;
-    organization: string;
-    username: string;
-    email: string;
-    phone_number: string;
-    date_joined: string;
-    user_status: string;
-}
+// interface User {
+//     id: number;
+//     organization: string;
+//     username: string;
+//     email: string;
+//     phone_number: string;
+//     date_joined: string;
+//     user_status: string;
+// }
 
 interface TableProps {
     user: User[];
