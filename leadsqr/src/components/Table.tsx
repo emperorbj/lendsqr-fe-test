@@ -29,7 +29,7 @@ interface TableProps {
 
 
 const Table = ({ user }: TableProps) => {
-    console.log(user)
+
     const [open, setOpen] = useState(false)
     const [detailsOpen, setDetailsOpen] = useState<number | null>(null);
 

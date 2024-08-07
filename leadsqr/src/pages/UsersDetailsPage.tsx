@@ -13,9 +13,6 @@ const UsersDetailsPage = () => {
     const params = useParams();
     const userDetail = user.filter((item) => item.id.toString() === params.id)[0];
     console.log(userDetail);
-    // const location = useLocation()
-    // const userDetail = location.state.item
-    console.log(userDetail);
 
     return (
         <div>
